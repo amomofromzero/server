@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zn-ch">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="阿莫莫">
+  <meta name="description" content="免费资源网站导航和免费共享资源">
+  <link rel="icon" href="/images/amomo.png" type="image">
+  <title>主页</title>
+</head>
+
+<body style="background-color:black">
+  <p id="welcome" style="color:rgba(248, 248, 248, 0);text-align: center;font-size: 100%;"></p>
+  <script>
+    welcome = document.getElementById("welcome")
+    var welcome_content = "amomo.club"
+    i = 0
+    var move = setInterval(function () {
+      welcome.style.color = `rgba(248,248,248,${i * 0.01})`;
+      welcome.style.fontSize = `${Math.min(i * 2, 300)}%`;
+      welcome.innerHTML = "Welcome to <br> " + welcome_content.slice(0, Math.max(0, (i - 100) / 10));
+      i += 1;
+    }, 10)
+  </script>
+</body>
+
+</html>

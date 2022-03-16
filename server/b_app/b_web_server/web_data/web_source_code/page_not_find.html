@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="阿莫莫">
+    <title>页面缺失</title>
+</head>
+
+<body>
+    <sa>212<br>323</sa>
+    <p hidden=true style="text-align: center;" class="not-find">没有找到对应的页面或文件，将在<span class="not-find"></span>秒后，跳转到主页，<a
+            href="http://www.amomo.club" title="跳转到主页 &#10 http://www.amomo.club">直接跳转</a></p>
+</body>
+<script>
+    let timeNum = 5
+    const pElement = document.querySelector("p.not-find")
+    console.log(pElement)
+    const sElement = document.querySelector("span.not-find")
+
+    timeCount = setInterval(() => {
+        sElement.textContent = timeNum;
+        pElement.hidden = false;
+        timeNum--;
+        if (timeNum === 0) {
+            clearInterval(timeCount)
+        }
+    }, 1000)
+</script>
+
+</html>
